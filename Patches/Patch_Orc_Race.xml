@@ -60,8 +60,8 @@
 						</capacities>
 						<power>12.6</power>
 						<cooldownTime>2</cooldownTime>
-						<armorPenetrationSharp>6</armorPenetrationSharp>
-						<armorPenetrationBlunt>18.4</armorPenetrationBlunt>
+						<armorPenetrationSharp>0</armorPenetrationSharp>
+						<armorPenetrationBlunt>5</armorPenetrationBlunt>
 						<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
 					  </li>
 					  <li Class="CombatExtended.ToolCE">
@@ -71,8 +71,8 @@
 						</capacities>
 						<power>12.6</power>
 						<cooldownTime>2</cooldownTime>
-						<armorPenetrationSharp>6</armorPenetrationSharp>
-						<armorPenetrationBlunt>18.4</armorPenetrationBlunt>
+						<armorPenetrationSharp>0</armorPenetrationSharp>
+						<armorPenetrationBlunt>5</armorPenetrationBlunt>
 						<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
 					  </li>
 					  <li Class="CombatExtended.ToolCE">
