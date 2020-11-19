@@ -30,8 +30,8 @@
 				</value>
 			</li>
 			
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="Apparel_OrcChestPlate"]/equippedStatOffsets</xpath>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Apparel_OrcChestPlate"]</xpath>
 				<value>
 					<equippedStatOffsets>
 						<MeleeDodgeChance>-0.045</MeleeDodgeChance>
