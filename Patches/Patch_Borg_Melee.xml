@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+		<li>Borg Race (Continued)</li>
+    </mods>
+		<match Class="PatchOperationSequence">
+		<operations>
+			
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="BorgNaniteProbe"]/tools</xpath>
+				<value>
+					<tools>
+					  <li Class="CombatExtended.ToolCE">
+						<label>injector</label>
+						<labelUsedInLogging>false</labelUsedInLogging>
+						<capacities>
+						  <li>naniteInjector</li>
+						</capacities>
+						<power>1</power>
+						<cooldownTime>15</cooldownTime>
+						<armorPenetrationBlunt>2</armorPenetrationBlunt>
+						<armorPenetrationSharp>18</armorPenetrationSharp>
+					  </li>
+					</tools>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[
+				defName="BorgNaniteProbe" or
+				defName="BorgNaniteProbePlayer"
+				]</xpath>
+				<value>
+					<equippedStatOffsets>
+					  <MeleeCritChance>0.3</MeleeCritChance>
+					  <MeleeParryChance>0.01</MeleeParryChance>
+					  <MeleeDodgeChance>0.1</MeleeDodgeChance>
+					</equippedStatOffsets>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[
+				defName="BorgNaniteProbe" or
+				defName="BorgNaniteProbePlayer"
+				]/statBases</xpath>
+				<value>
+					<Bulk>3</Bulk>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="BorgNaniteProbePlayer"]/tools</xpath>
+				<value>
+					<tools>
+					  <li Class="CombatExtended.ToolCE">
+						<label>injector</label>
+						<labelUsedInLogging>false</labelUsedInLogging>
+						<capacities>
+						  <li>naniteInjectorPlayer</li>
+						</capacities>
+						<power>1</power>
+						<cooldownTime>15</cooldownTime>
+						<armorPenetrationBlunt>2</armorPenetrationBlunt>
+						<armorPenetrationSharp>18</armorPenetrationSharp>
+					  </li>
+					</tools>
+				</value>
+			</li>
+			
+		</operations>
+		</match>
+	</Operation>
+	
+</Patch>

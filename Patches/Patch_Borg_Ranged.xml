@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+		<li>Borg Race (Continued)</li>
+    </mods>
+		<match Class="PatchOperationSequence">
+		<operations>
+			
+			
+			
+			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>Borg_DroneBlaster</defName>
+					<statBases>
+						<SightsEfficiency>1.0</SightsEfficiency>
+						<ShotSpread>0.14</ShotSpread>
+						<SwayFactor>1.01</SwayFactor>
+						<Bulk>3.5</Bulk>
+						<Mass>4</Mass>
+						<RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+					</statBases>
+					<Properties>
+						<recoilAmount>1.53</recoilAmount>
+						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>Bullet_PlasmaCellHeavy</defaultProjectile>
+						<warmupTime>1.0</warmupTime>
+						<range>48</range>
+						<soundCast>Phaser_blast5</soundCast>
+						<soundCastTail>GunTail_Light</soundCastTail>
+						<muzzleFlashScale>9</muzzleFlashScale>
+					</Properties>
+					<FireModes>
+						<aiAimMode>AimedShot</aiAimMode>
+					</FireModes>
+					<AmmoUser>
+					  <magazineSize>6</magazineSize>
+					  <reloadTime>5</reloadTime>
+					  <ammoSet>AmmoSet_PlasmaCellHeavy</ammoSet>
+					</AmmoUser>
+			</li>
+			
+			
+			
+			
+		</operations>
+		</match>
+	</Operation>
+	
+</Patch>

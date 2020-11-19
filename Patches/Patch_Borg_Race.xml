@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+		<li>Borg Race (Continued)</li>
+    </mods>
+		<match Class="PatchOperationSequence">
+		<operations>
+			
+			
+			
+			<li Class="PatchOperationAddModExtension">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Borg_Base"]</xpath>
+				<value>
+					<li Class="CombatExtended.RacePropertiesExtensionCE">
+						<bodyShape>Humanoid</bodyShape>
+					</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Borg_Base"]/statBases</xpath>
+				<value>
+					<CarryWeight>50</CarryWeight>
+					<CarryBulk>40</CarryBulk>
+					<AimingAccuracy>1.0</AimingAccuracy>
+					<ShootingAccuracyPawn>1.2</ShootingAccuracyPawn>
+					<MeleeDodgeChance>0.19</MeleeDodgeChance>
+					<MeleeCritChance>0.22</MeleeCritChance>
+					<MeleeParryChance>0.09</MeleeParryChance>
+					<MaxHitPoints>150</MaxHitPoints>
+					<SmokeSensitivity>0</SmokeSensitivity>
+				</value>
+			</li>
+			
+			
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Borg_Base"]/verbs</xpath>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Borg_Base"]</xpath>
+				<value>
+					<tools>
+					  <li Class="CombatExtended.ToolCE">
+						<label>left fist</label>
+						<capacities>
+						  <li>Blunt</li>
+						</capacities>
+						<power>9</power>
+						<cooldownTime>1.85</cooldownTime>
+						<armorPenetrationSharp>0</armorPenetrationSharp>
+						<armorPenetrationBlunt>5</armorPenetrationBlunt>
+						<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+					  </li>
+					  <li Class="CombatExtended.ToolCE">
+						<label>right fist</label>
+						<capacities>
+						  <li>Blunt</li>
+						</capacities>
+						<power>8</power>
+						<cooldownTime>1.85</cooldownTime>
+						<armorPenetrationSharp>0</armorPenetrationSharp>
+						<armorPenetrationBlunt>5</armorPenetrationBlunt>
+						<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+					  </li>
+					</tools>
+				</value>
+			</li>
+			
+			
+		</operations>
+		</match>
+	</Operation>
+	
+</Patch>

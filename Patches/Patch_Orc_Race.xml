@@ -8,7 +8,31 @@
 		<match Class="PatchOperationSequence">
 		<operations>
 			
-					
+			<li Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationTest">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Orc"]/comps</xpath>
+				<success>Invert</success>
+				</li>
+				<li Class="PatchOperationAdd">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Orc"]</xpath>
+				<value>
+					<comps />
+				</value>
+				</li>
+			</operations>
+			</li>
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Orc"]/comps</xpath>
+				<value>
+					<li>
+					  <compClass>CombatExtended.CompPawnGizmo</compClass>
+					</li>
+					<li Class="CombatExtended.CompProperties_Suppressable" />
+				</value>
+			</li>
 			
 			<li Class="PatchOperationAddModExtension">
 				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Orc"]</xpath>
@@ -30,7 +54,8 @@
 					<MeleeCritChance>0.22</MeleeCritChance>
 					<MeleeParryChance>0.09</MeleeParryChance>
 					<MaxHitPoints>150</MaxHitPoints>
-					<SmokeSensitivity>1</SmokeSensitivity>
+					<SmokeSensitivity>0</SmokeSensitivity>
+					<Suppressability>0.8</Suppressability>
 				</value>
 			</li>
 			
@@ -60,8 +85,8 @@
 						</capacities>
 						<power>12.6</power>
 						<cooldownTime>2</cooldownTime>
-						<armorPenetrationSharp>0</armorPenetrationSharp>
-						<armorPenetrationBlunt>5</armorPenetrationBlunt>
+						<armorPenetrationSharp>6</armorPenetrationSharp>
+						<armorPenetrationBlunt>18.4</armorPenetrationBlunt>
 						<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
 					  </li>
 					  <li Class="CombatExtended.ToolCE">
@@ -71,8 +96,8 @@
 						</capacities>
 						<power>12.6</power>
 						<cooldownTime>2</cooldownTime>
-						<armorPenetrationSharp>0</armorPenetrationSharp>
-						<armorPenetrationBlunt>5</armorPenetrationBlunt>
+						<armorPenetrationSharp>6</armorPenetrationSharp>
+						<armorPenetrationBlunt>18.4</armorPenetrationBlunt>
 						<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
 					  </li>
 					  <li Class="CombatExtended.ToolCE">
