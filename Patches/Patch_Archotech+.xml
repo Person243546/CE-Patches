@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+		<li>Archotech+</li>
+    </mods>
+		<match Class="PatchOperationSequence">
+		<operations>
+			
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/HediffDef[
+				defName="ArchotechSubdermalArmor"
+				]/stages/li[1]</xpath>
+				<value>
+					 
+						<li>
+						<minSeverity>1</minSeverity>
+						<statOffsets>
+						  <ArmorRating_Sharp>4</ArmorRating_Sharp>
+						  <ArmorRating_Blunt>4</ArmorRating_Blunt>
+						  <ArmorRating_Heat>0.2</ArmorRating_Heat>
+						</statOffsets>
+						<totalBleedFactor>0.8</totalBleedFactor>
+						</li>
+					 
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/HediffDef[
+				defName="ArchotechSubdermalArmor"
+				]/stages/li[2]</xpath>
+				<value>
+					 
+						<li>
+						<minSeverity>2</minSeverity>
+						<statOffsets>
+							<ArmorRating_Sharp>6</ArmorRating_Sharp>
+							<ArmorRating_Blunt>6</ArmorRating_Blunt>
+							<ArmorRating_Heat>0.30</ArmorRating_Heat>
+						</statOffsets>
+						<totalBleedFactor>0.6</totalBleedFactor>
+						<statFactors>
+						<IncomingDamageFactor>0.9</IncomingDamageFactor>
+						</statFactors>
+						</li>
+					 
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/HediffDef[
+				defName="ArchotechSubdermalArmor"
+				]/stages/li[3]</xpath>
+				<value>
+					 
+						<li>
+						<minSeverity>3</minSeverity>
+						<statOffsets>
+						  <ArmorRating_Sharp>8</ArmorRating_Sharp>
+						  <ArmorRating_Blunt>8</ArmorRating_Blunt>
+						  <ArmorRating_Heat>0.4</ArmorRating_Heat>
+						</statOffsets>
+						<totalBleedFactor>0.4</totalBleedFactor>
+						<statFactors>
+						<IncomingDamageFactor>0.75</IncomingDamageFactor>
+						</statFactors>
+						</li>
+					 
+				</value>
+			</li>
+			
+			
+			
+		</operations>
+		</match>
+	</Operation>
+	
+</Patch>

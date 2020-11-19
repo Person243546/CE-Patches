@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+		<li>Filthy Orc Invasion (Continued)</li>
+    </mods>
+		<match Class="PatchOperationSequence">
+		<operations>
+			
+					
+			
+			<li Class="PatchOperationAddModExtension">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Orc"]</xpath>
+				<value>
+					<li Class="CombatExtended.RacePropertiesExtensionCE">
+						<bodyShape>Humanoid</bodyShape>
+					</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Orc"]/statBases</xpath>
+				<value>
+					<CarryWeight>50</CarryWeight>
+					<CarryBulk>20</CarryBulk>
+					<AimingAccuracy>1.0</AimingAccuracy>
+					<ShootingAccuracyPawn>0.5</ShootingAccuracyPawn>
+					<MeleeDodgeChance>0.19</MeleeDodgeChance>
+					<MeleeCritChance>0.22</MeleeCritChance>
+					<MeleeParryChance>0.09</MeleeParryChance>
+					<MaxHitPoints>150</MaxHitPoints>
+					<SmokeSensitivity>0</SmokeSensitivity>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Orc"]/statBases/ArmorRating_Blunt</xpath>
+				<value>
+					<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Orc"]/statBases/ArmorRating_Sharp</xpath>
+				<value>
+					<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+				</value>
+			</li>
+			
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Orc"]/tools</xpath>
+				<value>
+					<tools>
+					  <li Class="CombatExtended.ToolCE">
+						<label>left fist</label>
+						<capacities>
+						  <li>Blunt</li>
+						</capacities>
+						<power>12.6</power>
+						<cooldownTime>2</cooldownTime>
+						<armorPenetrationSharp>6</armorPenetrationSharp>
+						<armorPenetrationBlunt>18.4</armorPenetrationBlunt>
+						<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+					  </li>
+					  <li Class="CombatExtended.ToolCE">
+						<label>right fist</label>
+						<capacities>
+						  <li>Blunt</li>
+						</capacities>
+						<power>12.6</power>
+						<cooldownTime>2</cooldownTime>
+						<armorPenetrationSharp>6</armorPenetrationSharp>
+						<armorPenetrationBlunt>18.4</armorPenetrationBlunt>
+						<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+					  </li>
+					  <li Class="CombatExtended.ToolCE">
+						<label>tusk</label>
+						<capacities>
+						  <li>Scratch</li>
+						  <li>Stab</li>
+						</capacities>
+						<power>15.6</power>
+						<cooldownTime>2</cooldownTime>
+						<armorPenetrationSharp>0</armorPenetrationSharp>
+						<armorPenetrationBlunt>15.25</armorPenetrationBlunt>
+						<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+						<chanceFactor>0.07</chanceFactor>
+					  </li>
+					  <li Class="CombatExtended.ToolCE">
+						<label>head</label>
+						<capacities>
+						  <li>Blunt</li>
+						</capacities>
+						<power>5</power>
+						<cooldownTime>2</cooldownTime>
+						<armorPenetrationSharp>0</armorPenetrationSharp>
+						<armorPenetrationBlunt>15.25</armorPenetrationBlunt>
+						<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+						<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+						<chanceFactor>0.2</chanceFactor>
+					  </li>
+					</tools>
+				</value>
+			</li>
+			
+			
+		</operations>
+		</match>
+	</Operation>
+	
+</Patch>

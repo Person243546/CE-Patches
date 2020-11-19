@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+		<li>Filthy Orc Invasion (Continued)</li>
+    </mods>
+		<match Class="PatchOperationSequence">
+		<operations>
+			
+			
+			
+			
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="MeleeWeapon_GreatMaul"]/tools</xpath>
+				<value>
+					<tools>
+					  <li Class="CombatExtended.ToolCE">
+						<label>pick</label>
+						<capacities>
+						  <li>Stab</li>
+						</capacities>
+						<power>35</power>
+						<cooldownTime>2.67</cooldownTime>
+						<armorPenetrationBlunt>10</armorPenetrationBlunt>
+						<armorPenetrationSharp>3</armorPenetrationSharp>
+						<linkedBodyPartsGroup>Head</linkedBodyPartsGroup>
+					  </li>
+					  <li Class="CombatExtended.ToolCE">
+						<label>head</label>
+						<capacities>
+						  <li>Blunt</li>
+						</capacities>
+						<power>20</power>
+						<cooldownTime>2.67</cooldownTime>
+						<armorPenetrationBlunt>15.75</armorPenetrationBlunt>
+						<linkedBodyPartsGroup>Head</linkedBodyPartsGroup>
+					  </li>
+					</tools>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="MeleeWeapon_GreatMaul"]/equippedStatOffsets</xpath>
+				<value>
+					<equippedStatOffsets>
+					  <MeleeCritChance>0.8</MeleeCritChance>
+					  <MeleeParryChance>0.38</MeleeParryChance>
+					  <MeleeDodgeChance>0.1</MeleeDodgeChance>
+					</equippedStatOffsets>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="MeleeWeapon_GreatMaul"]/statBases/Mass</xpath>
+				<value>
+					<Mass>4.1</Mass>
+					<Bulk>17</Bulk>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="MeleeWeapon_GreatClub"]/tools</xpath>
+				<value>
+					<tools>
+					  <li Class="CombatExtended.ToolCE">
+						<label>head</label>
+						<capacities>
+						  <li>Blunt</li>
+						</capacities>
+						<power>18</power>
+						<cooldownTime>2.0</cooldownTime>
+						<armorPenetrationBlunt>12</armorPenetrationBlunt>
+						<linkedBodyPartsGroup>Head</linkedBodyPartsGroup>
+					  </li>
+					</tools>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="MeleeWeapon_GreatClub"]/equippedStatOffsets</xpath>
+				<value>
+					<equippedStatOffsets>
+					  <MeleeCritChance>1.9</MeleeCritChance>
+					  <MeleeParryChance>0.38</MeleeParryChance>
+					  <MeleeDodgeChance>0.1</MeleeDodgeChance>
+					</equippedStatOffsets>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="MeleeWeapon_GreatClub"]/statBases/Mass</xpath>
+				<value>
+					<Mass>4.1</Mass>
+					<Bulk>13</Bulk>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="MeleeWeapon_GreatAxe"]/tools</xpath>
+				<value>
+					<tools>
+					  <li Class="CombatExtended.ToolCE">
+						<label>head</label>
+						<capacities>
+						  <li>Poke</li>
+						</capacities>
+						<power>12</power>
+						<cooldownTime>2.0</cooldownTime>
+						<armorPenetrationBlunt>6</armorPenetrationBlunt>
+						<linkedBodyPartsGroup>Head</linkedBodyPartsGroup>
+					  </li>
+					  <li Class="CombatExtended.ToolCE">
+						<label>edge</label>
+						<capacities>
+						  <li>Cut</li>
+						</capacities>
+						<power>35</power>
+						<cooldownTime>3.2</cooldownTime>
+						<armorPenetrationBlunt>12</armorPenetrationBlunt>
+						<armorPenetrationSharp>4</armorPenetrationSharp>
+					  </li>
+					</tools>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="MeleeWeapon_GreatAxe"]/equippedStatOffsets</xpath>
+				<value>
+					<equippedStatOffsets>
+					  <MeleeCritChance>0.8</MeleeCritChance>
+					  <MeleeParryChance>1.4</MeleeParryChance>
+					  <MeleeDodgeChance>0.01</MeleeDodgeChance>
+					</equippedStatOffsets>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="MeleeWeapon_GreatAxe"]/statBases/Mass</xpath>
+				<value>
+					<Mass>4.1</Mass>
+					<Bulk>17</Bulk>
+				</value>
+			</li>
+			
+			
+			
+			
+		</operations>
+		</match>
+	</Operation>
+	
+</Patch>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+		<li>Filthy Orc Invasion (Continued)</li>
+    </mods>
+		<match Class="PatchOperationSequence">
+		<operations>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Apparel_OrcChestPlate"]/statBases/Mass</xpath>
+				<value>
+					<Bulk>30</Bulk>
+					<WornBulk>2.5</WornBulk>
+					<Mass>2</Mass>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Apparel_OrcChestPlate"]/statBases/ArmorRating_Blunt</xpath>
+				<value>
+					<ArmorRating_Blunt>1.5</ArmorRating_Blunt>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Apparel_OrcChestPlate"]/statBases/ArmorRating_Sharp</xpath>
+				<value>
+					<ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Apparel_OrcChestPlate"]/equippedStatOffsets</xpath>
+				<value>
+					<equippedStatOffsets>
+						<MeleeDodgeChance>-0.045</MeleeDodgeChance>
+					</equippedStatOffsets>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Apparel_OrcBreastPlate"]/statBases/Mass</xpath>
+				<value>
+					<Bulk>30</Bulk>
+					<WornBulk>4.5</WornBulk>
+					<Mass>4.5</Mass>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Apparel_OrcBreastPlate"]/statBases/StuffEffectMultiplierArmor</xpath>
+				<value>
+					<StuffEffectMultiplierArmor>2.5</StuffEffectMultiplierArmor>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Apparel_OrcBreastPlate"]/equippedStatOffsets</xpath>
+				<value>
+					<equippedStatOffsets>
+						<MeleeDodgeChance>-0.09</MeleeDodgeChance>
+					</equippedStatOffsets>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Apparel_OrcLeggings"]/statBases/Mass</xpath>
+				<value>
+					<Bulk>30</Bulk>
+					<WornBulk>2.5</WornBulk>
+					<Mass>2</Mass>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Apparel_OrcLeggings"]/statBases/StuffEffectMultiplierArmor</xpath>
+				<value>
+					<StuffEffectMultiplierArmor>1.5</StuffEffectMultiplierArmor>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Apparel_OrcLeggings"]/equippedStatOffsets</xpath>
+				<value>
+					<equippedStatOffsets>
+						<MeleeDodgeChance>-0.09</MeleeDodgeChance>
+					</equippedStatOffsets>
+				</value>
+			</li>
+			
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Apparel_OrcEyehelm"]/statBases/Mass</xpath>
+				<value>
+					<Bulk>5</Bulk>
+					<WornBulk>0.5</WornBulk>
+					<Mass>3</Mass>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Apparel_OrcEyehelm"]/statBases/StuffEffectMultiplierArmor</xpath>
+				<value>
+					<StuffEffectMultiplierArmor>2</StuffEffectMultiplierArmor>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Apparel_OrcEyehelm"]/equippedStatOffsets</xpath>
+				<value>
+					<equippedStatOffsets>
+						<AimingAccuracy>-0.1</AimingAccuracy>
+						<MeleeHitChance>-0.5</MeleeHitChance>
+					</equippedStatOffsets>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Apparel_OrcEyehelm"]/stuffCategories</xpath>
+				<value>
+					<stuffCategories>
+						<li>Steeled</li>
+					</stuffCategories>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Apparel_OrcEyehelm"]/apparel/bodyPartGroups</xpath>
+				<value>
+					<bodyPartGroups>
+						<li>UpperHead</li>
+						<li>Eyes</li>
+						<li>Teeth</li>
+					</bodyPartGroups>
+				</value>
+			</li>
+			
+			
+			
+		</operations>
+		</match>
+	</Operation>
+	
+</Patch>

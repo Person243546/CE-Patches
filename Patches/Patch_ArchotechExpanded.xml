@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+		<li>Archotech Expanded</li>
+    </mods>
+		<match Class="PatchOperationSequence">
+		<operations>
+			
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/HediffDef[
+				defName="AdvancedArchotechArm"
+				]/comps/li[@Class="HediffCompProperties_VerbGiver"]/tools</xpath>
+				<value>
+					<tools>
+					  <li Class="CombatExtended.ToolCE">
+						<label>fist</label>
+						<capacities>
+						  <li>Blunt</li>
+						</capacities>
+						<power>25</power>
+						<cooldownTime>1.2</cooldownTime>
+						<armorPenetrationSharp>0</armorPenetrationSharp>
+						<armorPenetrationBlunt>20</armorPenetrationBlunt>
+						<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+					  </li>
+					</tools>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/HediffDef[
+				defName="ArchotechObliterator"
+				]/comps/li[@Class="HediffCompProperties_VerbGiver"]/tools</xpath>
+				<value>
+					<tools>
+					  <li Class="CombatExtended.ToolCE">
+						<label>fist</label>
+						<capacities>
+						  <li>Blunt</li>
+						</capacities>
+						<power>8.2</power>
+						<cooldownTime>0.01</cooldownTime>
+						<armorPenetrationSharp>0</armorPenetrationSharp>
+						<armorPenetrationBlunt>15</armorPenetrationBlunt>
+						<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+					  </li>
+					</tools>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/HediffDef[
+				defName="ArchotechDeathClaw"
+				]/comps/li[@Class="HediffCompProperties_VerbGiver"]/tools</xpath>
+				<value>
+					<tools>
+					  <li Class="CombatExtended.ToolCE">
+						<label>claw</label>
+						<capacities>
+						  <li>Scratch</li>
+						</capacities>
+						<power>30</power>
+						<cooldownTime>0.75</cooldownTime>
+						<armorPenetrationSharp>40</armorPenetrationSharp>
+						<armorPenetrationBlunt>30</armorPenetrationBlunt>
+						<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+					  </li>
+					</tools>
+				</value>
+			</li>
+			
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/HediffDef[
+				defName="ArchotechSubdermalArmor"
+				]/stages/li</xpath>
+				<value>
+					<li>
+					<minSeverity>1</minSeverity>
+					<partEfficiencyOffset>2</partEfficiencyOffset>
+						<statOffsets>
+							<MeleeDodgeChance>10</MeleeDodgeChance>
+							<ArmorRating_Sharp>25</ArmorRating_Sharp>
+							<ArmorRating_Blunt>50</ArmorRating_Blunt>
+							<ArmorRating_Heat>10</ArmorRating_Heat>
+							<GeneralLaborSpeed>10</GeneralLaborSpeed>
+						</statOffsets>
+					</li>
+				</value>
+			</li>
+			
+			
+			
+		</operations>
+		</match>
+	</Operation>
+	
+</Patch>
