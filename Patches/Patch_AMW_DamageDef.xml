@@ -11,7 +11,7 @@
 			<li Class="PatchOperationReplace">
 				<xpath>/Defs/DamageDef[defName="NovaBomb"]/defaultDamage</xpath>
 				<value>
-					<defaultDamage>200</defaultDamage>
+					<defaultDamage>80</defaultDamage>
 				</value>
 			</li>
 			
