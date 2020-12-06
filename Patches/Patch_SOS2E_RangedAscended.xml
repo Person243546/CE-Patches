@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+		<li>Save Our Ship 2 - Extensions</li>
+    </mods>
+		<match Class="PatchOperationSequence">
+		<operations>
+			
+			
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[
+				defName="AscendedArchobeam" or
+				defName="AscendedArchoflame" or
+				defName="AscendedArchoDisruptorWave" or
+				defName="AscendedArchoRipper" or
+				defName="AscendedArchoLanceBullet" or
+				defName="AscendedArchoPlasma"
+				]/thingClass</xpath>
+				<value>
+					<thingClass>CombatExtended.BulletCE</thingClass>
+				</value>
+			</li>
+			
+			
+			  <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[
+				defName="AscendedArchogun_Ripper" or
+				defName="AscendedArchogun_Disruptor" or
+				defName="AscendedArchogun_Plasma" or
+				defName="AscendedArchogun_AlgaeFlamer" or
+				defName="AscendedArchogun_Lance" or
+				defName="AscendedArchogun_AlgaeBeamer"
+				]/tools</xpath>
+				<value>
+				  <tools>
+					<li Class="CombatExtended.ToolCE">
+					  <label>stock</label>
+					  <capacities>
+						<li>Blunt</li>
+					  </capacities>
+					  <power>8</power>
+					  <cooldownTime>1.55</cooldownTime>
+					  <chanceFactor>1.5</chanceFactor>
+					  <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+					  <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+					</li>
+					<li Class="CombatExtended.ToolCE">
+					  <label>barrel</label>
+					  <capacities>
+						<li>Blunt</li>
+					  </capacities>
+					  <power>5</power>
+					  <cooldownTime>2.02</cooldownTime>
+					  <armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+					  <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+					</li>
+					<li Class="CombatExtended.ToolCE">
+					  <label>muzzle</label>
+					  <capacities>
+						<li>Poke</li>
+					  </capacities>
+					  <power>8</power>
+					  <cooldownTime>1.55</cooldownTime>
+					  <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+					  <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+					</li>
+				  </tools>
+				</value>
+			  </li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="AscendedArchobeam"]/projectile</xpath>
+				<value>
+					<projectile Class="CombatExtended.ProjectilePropertiesCE">
+					  <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+					  <dropsCasings>false</dropsCasings>
+					  <damageAmountBase>30</damageAmountBase>
+					  <damageDef>Bullet</damageDef>
+					  <speed>30</speed>
+						  <secondaryDamage>
+							<li>
+							  <def>AscendedArchobeamDmg</def>
+							  <amount>80</amount>
+							</li>
+						  </secondaryDamage>
+					  <gravityFactor>1</gravityFactor>
+						<armorPenetrationSharp>200</armorPenetrationSharp>
+						<armorPenetrationBlunt>200</armorPenetrationBlunt>
+					</projectile>
+					<comps>
+					  <li Class="CombatExtended.CompProperties_ExplosiveCE">
+						<damageAmountBase>600</damageAmountBase>
+						<explosiveDamageType>AscendedArchobeamDmg</explosiveDamageType>
+						<explosiveRadius>4</explosiveRadius>
+						<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+					  </li>
+					</comps>
+				</value>
+			</li>
+				
+			
+			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>AscendedArchogun_AlgaeBeamer</defName>
+					<statBases>
+						<SightsEfficiency>3.0</SightsEfficiency>
+						<ShotSpread>0.04</ShotSpread>
+						<SwayFactor>0.91</SwayFactor>
+						<Bulk>3.5</Bulk>
+						<Mass>6</Mass>
+						<RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+					</statBases>
+					<Properties>
+						<recoilAmount>1.23</recoilAmount>
+						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>AscendedArchobeam</defaultProjectile>	
+						<warmupTime>1.3</warmupTime>
+						<burstShotCount>3</burstShotCount>
+						<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+						<range>100</range>
+						<soundCast>AscendedArchoBeamFire</soundCast>
+						<soundCastTail>GunTail_Medium</soundCastTail>
+						<targetParams>
+							<canTargetLocations>true</canTargetLocations>
+						</targetParams>
+						<ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
+					</Properties>
+					<FireModes>
+						<aiAimMode>AimedShot</aiAimMode>
+					</FireModes>
+					<weaponTags>
+						<li>CE_AI_Launcher</li>
+					</weaponTags>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="AscendedArchoflame"]/projectile</xpath>
+				<value>
+					<projectile Class="CombatExtended.ProjectilePropertiesCE">
+					  <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+					  <dropsCasings>false</dropsCasings>
+					  <gravityFactor>1</gravityFactor>
+					  <speed>18</speed>
+					  <damageDef>AscendedArchoFlameAcid</damageDef>
+					  <damageAmountBase>5</damageAmountBase>
+					  <explosionRadius>4.1</explosionRadius>	  
+					  <preExplosionSpawnThingDef>Filth_AscendedArchoAcid</preExplosionSpawnThingDef>
+					  <preExplosionSpawnChance>0.66</preExplosionSpawnChance>
+					  <ai_IsIncendiary>true</ai_IsIncendiary>
+					</projectile>
+				</value>
+			</li>
+			
+			
+			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>AscendedArchogun_AlgaeFlamer</defName>
+					<statBases>
+						<SightsEfficiency>3.0</SightsEfficiency>
+						<ShotSpread>0.18</ShotSpread>
+						<SwayFactor>0.91</SwayFactor>
+						<Bulk>4</Bulk>
+						<Mass>8</Mass>
+						<RangedWeapon_Cooldown>0.8</RangedWeapon_Cooldown>
+					</statBases>
+					<Properties>
+						<recoilAmount>1.23</recoilAmount>
+						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>AscendedArchoflame</defaultProjectile>
+						<warmupTime>1.3</warmupTime>
+						<range>40.9</range>
+						<minRange>2.9</minRange>
+						<burstShotCount>8</burstShotCount>
+						<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+						<soundCast>ArchoFlamerFire</soundCast>
+						<soundCastTail>GunTail_Medium</soundCastTail>
+						<targetParams>
+						  <canTargetLocations>true</canTargetLocations>
+						</targetParams>
+					</Properties>
+					<FireModes>
+						<aiAimMode>SuppressFire</aiAimMode>
+					</FireModes>
+					<weaponTags>
+						<li>CE_AI_Launcher</li>
+					</weaponTags>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="AscendedArchoPlasma"]/projectile</xpath>
+				<value>
+					<projectile Class="CombatExtended.ProjectilePropertiesCE">
+					  <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+					  <dropsCasings>false</dropsCasings>
+					  <gravityFactor>1</gravityFactor>
+					  <damageAmountBase>30</damageAmountBase>
+					  <speed>70</speed>
+						<armorPenetrationSharp>200</armorPenetrationSharp>
+						<armorPenetrationBlunt>200</armorPenetrationBlunt>
+						  <secondaryDamage>
+							<li>
+							  <def>AscendedArchoPlasmaDmg</def>
+							  <amount>160</amount>
+							</li>
+						  </secondaryDamage>
+					</projectile>
+					<comps>
+					  <li Class="CombatExtended.CompProperties_ExplosiveCE">
+						<damageAmountBase>160</damageAmountBase>
+						<explosiveDamageType>AscendedArchoPlasmaDmg</explosiveDamageType>
+						<explosiveRadius>2</explosiveRadius>
+						<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+					  </li>
+					</comps>
+				</value>
+			</li>
+			
+			
+			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>AscendedArchogun_Plasma</defName>
+					<statBases>
+						<SightsEfficiency>3.0</SightsEfficiency>
+						<ShotSpread>0.06</ShotSpread>
+						<SwayFactor>0.91</SwayFactor>
+						<Bulk>8</Bulk>
+						<Mass>12</Mass>
+						<RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+					</statBases>
+					<Properties>
+						<recoilAmount>1.23</recoilAmount>
+						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>AscendedArchoPlasma</defaultProjectile>
+						<warmupTime>3.0</warmupTime>
+						<range>60</range>
+						<soundCast>AscendedArchoPlasmaFire</soundCast>
+						<soundCastTail>GunTail_Medium</soundCastTail>
+						<targetParams>
+						  <canTargetLocations>true</canTargetLocations>
+						</targetParams>
+					</Properties>
+					<FireModes>
+						<aiAimMode>AimedShot</aiAimMode>
+					</FireModes>
+					<weaponTags>
+						<li>CE_AI_Launcher</li>
+					</weaponTags>
+			</li>
+			
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="AscendedArchoDisruptorWave"]/projectile</xpath>
+				<value>
+					<projectile Class="CombatExtended.ProjectilePropertiesCE">
+						<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+						<dropsCasings>false</dropsCasings>
+						<speed>150</speed>
+						<armorPenetrationSharp>200</armorPenetrationSharp>
+						<armorPenetrationBlunt>200</armorPenetrationBlunt>
+						<damageAmountBase>30</damageAmountBase>	
+						<damageDef>Bullet</damageDef> 
+						<secondaryDamage>
+							<li>
+							  <def>AscendedArchoEMP</def>
+							  <amount>30</amount>
+							</li>
+						</secondaryDamage>
+					</projectile>
+					<comps>
+					  <li Class="CombatExtended.CompProperties_ExplosiveCE">
+						<damageAmountBase>120</damageAmountBase>
+						<explosiveDamageType>AscendedArchoEMP</explosiveDamageType>
+						<explosiveRadius>2.3</explosiveRadius>
+						<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+					  </li>
+					</comps>
+				</value>
+			</li>
+			
+			
+			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>AscendedArchogun_Disruptor</defName>
+					<statBases>
+						<SightsEfficiency>3.0</SightsEfficiency>
+						<ShotSpread>0.14</ShotSpread>
+						<SwayFactor>0.91</SwayFactor>
+						<Bulk>5.5</Bulk>
+						<Mass>4</Mass>
+						<RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
+					</statBases>
+					<Properties>
+						<recoilAmount>1.23</recoilAmount>
+						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>AscendedArchoDisruptorWave</defaultProjectile>
+						<warmupTime>2</warmupTime>
+						<range>50.9</range>
+						<soundCast>AscendedArchoDisruptorFire</soundCast>
+						<soundCastTail>GunTail_Heavy</soundCastTail>
+						<targetParams>
+						  <canTargetLocations>true</canTargetLocations>
+						</targetParams>
+					</Properties>
+					<FireModes>
+						<aiAimMode>AimedShot</aiAimMode>
+					</FireModes>
+					<weaponTags>
+						<li>CE_AI_Launcher</li>
+					</weaponTags>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="AscendedArchoRipper"]/projectile</xpath>
+				<value>
+					<projectile Class="CombatExtended.ProjectilePropertiesCE">
+						<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+						<dropsCasings>false</dropsCasings>
+						<damageDef>AscendedArchoRipperLaser</damageDef>
+						<damageAmountBase>42</damageAmountBase>	  	  
+						<speed>150</speed>	
+						<armorPenetrationSharp>200</armorPenetrationSharp>
+						<armorPenetrationBlunt>200</armorPenetrationBlunt>
+					</projectile>
+				</value>
+			</li>
+			
+			
+			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>AscendedArchogun_Ripper</defName>
+					<statBases>
+						<SightsEfficiency>3.0</SightsEfficiency>
+						<ShotSpread>0.06</ShotSpread>
+						<SwayFactor>1.13</SwayFactor>
+						<Bulk>9</Bulk>
+						<Mass>4</Mass>
+						<RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+					</statBases>
+					<Properties>
+						<recoilAmount>1.23</recoilAmount>
+						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>AscendedArchoRipper</defaultProjectile>		
+						<warmupTime>1.3</warmupTime>
+						<burstShotCount>6</burstShotCount>
+						<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+						<range>80</range>
+						<soundCast>AscendedArchoRipperFire</soundCast>
+						<soundCastTail>GunTail_Medium</soundCastTail>
+					</Properties>
+					<FireModes>
+						<aiAimMode>AimedShot</aiAimMode>
+					</FireModes>
+					<weaponTags>
+						<li>CE_AI_Launcher</li>
+					</weaponTags>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="ArchoLanceBullet"]/projectile</xpath>
+				<value>
+					<projectile Class="CombatExtended.ProjectilePropertiesCE">
+						<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+						<dropsCasings>false</dropsCasings>
+						<armorPenetrationSharp>100</armorPenetrationSharp>
+						<armorPenetrationBlunt>100</armorPenetrationBlunt>
+						<damageAmountBase>20</damageAmountBase>	
+						<damageDef>Bullet</damageDef>
+						<speed>100</speed>
+						<secondaryDamage>
+							<li>
+							  <def>ArcholanceFlame</def>
+							  <amount>5</amount>
+							</li>
+						</secondaryDamage>
+					</projectile>
+					<comps>
+					  <li Class="CombatExtended.CompProperties_ExplosiveCE">
+						<damageAmountBase>5</damageAmountBase>
+						<explosiveDamageType>ArcholanceFlame</explosiveDamageType>
+						<explosiveRadius>2</explosiveRadius>
+						<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+					  </li>
+					</comps>
+				</value>
+			</li>
+			
+			
+			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>AscendedArchogun_Lance</defName>
+					<statBases>
+						<SightsEfficiency>6.0</SightsEfficiency>
+						<ShotSpread>0.14</ShotSpread>
+						<SwayFactor>0.91</SwayFactor>
+						<Bulk>12</Bulk>
+						<Mass>10</Mass>
+						<RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+					</statBases>
+					<Properties>
+						<recoilAmount>1.23</recoilAmount>
+						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>AscendedArchoLanceBullet</defaultProjectile>
+						<warmupTime>0.5</warmupTime>
+						<range>120</range>
+						<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+						<burstShotCount>2</burstShotCount>
+						<soundCast>AscendedArchoLanceFire</soundCast>
+						<soundCastTail>GunTail_Heavy</soundCastTail>
+						<targetParams>
+						  <canTargetLocations>true</canTargetLocations>
+						</targetParams>
+					</Properties>
+					<FireModes>
+						<aiAimMode>AimedShot</aiAimMode>
+					</FireModes>
+					<weaponTags>
+						<li>CE_AI_Launcher</li>
+					</weaponTags>
+			</li>
+			
+			
+		</operations>
+		</match>
+	</Operation>
+	
+</Patch>

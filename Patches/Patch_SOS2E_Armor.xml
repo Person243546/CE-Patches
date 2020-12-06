@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+		<li>Save Our Ship 2 - Extensions</li>
+    </mods>
+		<match Class="PatchOperationSequence">
+		<operations>
+			
+			
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="AArchoArmor"]/statBases</xpath>
+				<value>
+					<Bulk>120</Bulk>
+					<WornBulk>18</WornBulk>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="AArchoArmor"]/statBases/Mass</xpath>
+				<value>
+					<Mass>60</Mass>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="AArchoArmor"]/equippedStatOffsets</xpath>
+				<value>
+					<CarryWeight>100</CarryWeight>
+					<CarryBulk>30</CarryBulk>
+					<ShootingAccuracyPawn>0.2</ShootingAccuracyPawn>
+					<ToxicSensitivity>-0.5</ToxicSensitivity>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="AArchoArmor"]/statBases/ArmorRating_Sharp</xpath>
+				<value>
+					<ArmorRating_Sharp>60</ArmorRating_Sharp>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="AArchoArmor"]/statBases/ArmorRating_Blunt</xpath>
+				<value>
+					<ArmorRating_Blunt>135</ArmorRating_Blunt>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="AscendedArchoArmor"]/statBases</xpath>
+				<value>
+					<Bulk>120</Bulk>
+					<WornBulk>18</WornBulk>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="AscendedArchoArmor"]/statBases/Mass</xpath>
+				<value>
+					<Mass>60</Mass>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="AscendedArchoArmor"]/equippedStatOffsets</xpath>
+				<value>
+					<CarryWeight>200</CarryWeight>
+					<CarryBulk>60</CarryBulk>
+					<ShootingAccuracyPawn>0.2</ShootingAccuracyPawn>
+					<ToxicSensitivity>-0.75</ToxicSensitivity>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="AscendedArchoArmor"]/statBases/ArmorRating_Sharp</xpath>
+				<value>
+					<ArmorRating_Sharp>120</ArmorRating_Sharp>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="AscendedArchoArmor"]/statBases/ArmorRating_Blunt</xpath>
+				<value>
+					<ArmorRating_Blunt>270</ArmorRating_Blunt>
+				</value>
+			</li>
+			
+
+			  <li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="AArchoHelmet"]/statBases</xpath>
+				<value>
+				  <Bulk>5</Bulk>
+				  <WornBulk>1</WornBulk>
+				</value>
+			  </li>
+
+			  <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="AArchoHelmet"]/statBases/ArmorRating_Sharp</xpath>
+				<value>
+				  <ArmorRating_Sharp>50</ArmorRating_Sharp>
+				</value>
+			  </li>
+
+			  <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="AArchoHelmet"]/statBases/ArmorRating_Blunt</xpath>
+				<value>
+				  <ArmorRating_Blunt>120</ArmorRating_Blunt>
+				</value>
+			  </li>
+
+			  <li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="AArchoHelmet"]</xpath>
+				<value>
+				  <equippedStatOffsets>
+					<PsychicSensitivity>-0.2</PsychicSensitivity>
+					<AimingAccuracy>0.15</AimingAccuracy>
+					<ToxicSensitivity>-0.50</ToxicSensitivity>
+					<SmokeSensitivity>-1</SmokeSensitivity>
+				  </equippedStatOffsets>
+				</value>
+			  </li>
+
+			  <li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="AArchoHelmet"]/apparel/layers</xpath>
+				<value>
+				  <li>OnHead</li>
+				  <li>StrappedHead</li>
+				  <li>MiddleHead</li>
+				</value>
+			  </li>
+			
+			  <li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="AscendedArchoHelmet"]/statBases</xpath>
+				<value>
+				  <Bulk>5</Bulk>
+				  <WornBulk>1</WornBulk>
+				</value>
+			  </li>
+
+			  <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="AscendedArchoHelmet"]/statBases/ArmorRating_Sharp</xpath>
+				<value>
+				  <ArmorRating_Sharp>110</ArmorRating_Sharp>
+				</value>
+			  </li>
+
+			  <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="AscendedArchoHelmet"]/statBases/ArmorRating_Blunt</xpath>
+				<value>
+				  <ArmorRating_Blunt>250</ArmorRating_Blunt>
+				</value>
+			  </li>
+
+			  <li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="AscendedArchoHelmet"]</xpath>
+				<value>
+				  <equippedStatOffsets>
+					<PsychicSensitivity>-0.2</PsychicSensitivity>
+					<AimingAccuracy>0.3</AimingAccuracy>
+					<ToxicSensitivity>-0.75</ToxicSensitivity>
+					<SmokeSensitivity>-1</SmokeSensitivity>
+				  </equippedStatOffsets>
+				</value>
+			  </li>
+
+			  <li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="AscendedArchoHelmet"]/apparel/layers</xpath>
+				<value>
+				  <li>OnHead</li>
+				  <li>StrappedHead</li>
+				  <li>MiddleHead</li>
+				</value>
+			  </li>
+			  
+			  <li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Archoflashlightdrone"]/statBases</xpath>
+				<value>
+				  <Bulk>1</Bulk>
+				  <WornBulk>0.1</WornBulk>
+				</value>
+			  </li>
+
+			 <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Archoflashlightdrone"]/statBases/ArmorRating_Sharp</xpath>
+				<value>
+					<ArmorRating_Sharp>1</ArmorRating_Sharp>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Archoflashlightdrone"]/statBases/ArmorRating_Blunt</xpath>
+				<value>
+					<ArmorRating_Blunt>3</ArmorRating_Blunt>
+				</value>
+			</li>
+			
+			
+			
+		</operations>
+		</match>
+	</Operation>
+	
+</Patch>

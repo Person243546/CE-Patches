@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+		<li>Save Our Ship 2 - Extensions</li>
+    </mods>
+		<match Class="PatchOperationSequence">
+		<operations>
+			
+			
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="ArchoMelee_Slicer"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<label>handle</label>
+							<capacities>
+								<li>Poke</li>
+							</capacities>
+							<power>3</power>
+							<cooldownTime>1.69</cooldownTime>
+							<chanceFactor>0.01</chanceFactor>
+							<armorPenetrationBlunt>0.80</armorPenetrationBlunt>
+							<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>MolecularEdge</label>
+							<capacities>
+								<li>FrostStrike</li>
+							</capacities>
+							<power>40</power>
+							<extraMeleeDamages>
+							<li>
+								<def>Flame</def>
+								<amount>5</amount>
+								<chance>0.3</chance>
+							</li>
+							</extraMeleeDamages>					
+							<cooldownTime>2.06</cooldownTime>
+							<armorPenetrationBlunt>3.20</armorPenetrationBlunt>
+							<armorPenetrationSharp>90</armorPenetrationSharp>
+							<linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>MolecularBlade</label>
+							<capacities>
+							<li>FrostStrike</li>
+							</capacities>
+							<power>27</power>				
+							<cooldownTime>0.99</cooldownTime>
+							<armorPenetrationBlunt>3.24</armorPenetrationBlunt>
+							<armorPenetrationSharp>150</armorPenetrationSharp>
+						</li>				
+					</tools>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="AscendedArchoMelee_Slicer"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<label>handle</label>
+							<capacities>
+								<li>Poke</li>
+							</capacities>
+							<power>15</power>
+							<cooldownTime>1.69</cooldownTime>
+							<chanceFactor>0.01</chanceFactor>
+							<armorPenetrationBlunt>0.80</armorPenetrationBlunt>
+							<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>MolecularEdge</label>
+							<capacities>
+								<li>FrostStrike</li>
+							</capacities>
+							<power>80</power>
+							<extraMeleeDamages>
+							<li>
+								<def>Flame</def>
+								<amount>5</amount>
+								<chance>0.3</chance>
+							</li>
+							</extraMeleeDamages>					
+							<cooldownTime>2.06</cooldownTime>
+							<armorPenetrationBlunt>3.20</armorPenetrationBlunt>
+							<armorPenetrationSharp>180</armorPenetrationSharp>
+							<linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>MolecularBlade</label>
+							<capacities>
+							<li>FrostStrike</li>
+							</capacities>
+							<power>54</power>					
+							<cooldownTime>0.99</cooldownTime>
+							<armorPenetrationBlunt>3.24</armorPenetrationBlunt>
+							<armorPenetrationSharp>300</armorPenetrationSharp>
+						</li>				
+					</tools>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="ArchoMelee_Slicer"]</xpath>
+				<value>
+					<equippedStatOffsets>
+						<MeleeCritChance>0.63</MeleeCritChance>
+						<MeleeParryChance>0.75</MeleeParryChance>
+						<MeleeDodgeChance>0.4</MeleeDodgeChance>	
+					</equippedStatOffsets>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="AscendedArchoMelee_Slicer"]</xpath>
+				<value>
+					<equippedStatOffsets>
+						<MeleeCritChance>0.63</MeleeCritChance>
+						<MeleeParryChance>1.5</MeleeParryChance>
+						<MeleeDodgeChance>0.4</MeleeDodgeChance>	
+					</equippedStatOffsets>
+				</value>
+			</li>
+			
+			
+		</operations>
+		</match>
+	</Operation>
+	
+</Patch>

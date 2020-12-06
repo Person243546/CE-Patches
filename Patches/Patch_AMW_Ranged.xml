@@ -164,7 +164,7 @@
 				</value>
 			</li>
 			
-
+			
 			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
 				<defName>Gun_KineticWingInternal</defName>
 					<statBases>
