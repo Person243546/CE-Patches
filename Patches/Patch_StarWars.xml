@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+		<li>Star Wars - Factions (Continued)</li>
+    </mods>
+		<match Class="PatchOperationSequence">
+		<operations>
+			
+			<li Class="PatchOperationFindMod">
+			<mods>
+				<li>[JDS] Star Wars BlasTech Industries</li>
+			</mods>
+				<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/ThingDef[
+						defName="PJ_DC15Rifle" or
+						defName="PJ_SE14blaster" or
+						defName="PJ_EE3Carbine"
+						]</xpath>
+					</li>
+
+					<li Class="PatchOperationConditional">
+						<xpath>Defs/ThingDef[
+						defName="DC-15A_Blaster_Rifle"
+						]/weaponTags</xpath>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>Defs/ThingDef[defName="DC-15A_Blaster_Rifle"]</xpath>
+							<value>
+								<weaponTags/>
+							</value>
+						</nomatch>
+						<match Class="PatchOperationAdd">
+							<xpath>Defs/ThingDef[defName="DC-15A_Blaster_Rifle"]</xpath>
+							<value>
+							</value>
+						</match>
+					</li>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="DC-15A_Blaster_Rifle"]/weaponTags</xpath>
+						<value>
+						  <li>Blaster</li>
+						</value>
+					</li>
+					
+					<li Class="PatchOperationConditional">
+						<xpath>Defs/ThingDef[
+						defName="SE-14_Light_Blaster_Pistol"
+						]/weaponTags</xpath>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>Defs/ThingDef[defName="SE-14_Light_Blaster_Pistol"]</xpath>
+							<value>
+								<weaponTags/>
+							</value>
+						</nomatch>
+						<match Class="PatchOperationAdd">
+							<xpath>Defs/ThingDef[defName="SE-14_Light_Blaster_Pistol"]</xpath>
+							<value>
+							</value>
+						</match>
+					</li>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="SE-14_Light_Blaster_Pistol"]/weaponTags</xpath>
+						<value>
+							<li>MedievalShields_ValidSidearm</li>
+							<li>ImpBlaster</li>
+							<li>ImpSidearm</li>
+							<li>Blaster</li>
+						</value>
+					</li>
+					
+					<li Class="PatchOperationConditional">
+						<xpath>Defs/ThingDef[
+						defName="EE-3_Carbine_Rifle"
+						]/weaponTags</xpath>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>Defs/ThingDef[defName="EE-3_Carbine_Rifle"]</xpath>
+							<value>
+								<weaponTags/>
+							</value>
+						</nomatch>
+						<match Class="PatchOperationAdd">
+							<xpath>Defs/ThingDef[defName="EE-3_Carbine_Rifle"]</xpath>
+							<value>
+							</value>
+						</match>
+					</li>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="EE-3_Carbine_Rifle"]/weaponTags</xpath>
+						<value>
+							<li>MedievalShields_ValidSidearm</li>
+							<li>ImpBlaster</li>
+							<li>Blaster</li>
+						</value>
+					</li>
+					
+					
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/TraderKindDef[defName="PJ_ImpTrader_CombatSupplier" or defName="PJ_ImpTrader_Base"]/stockGenerators/li[8]/thingDef</xpath>
+						<value>
+							<thingDef>DC-15A_Blaster_Rifle</thingDef>
+						</value>
+					</li>
+					
+					
+					
+					
+					
+				</operations>
+				</match>
+			</li>
+			
+		</operations>
+		</match>
+	</Operation>
+	
+</Patch>

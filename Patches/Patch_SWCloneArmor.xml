@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+		<li>[JDS] Star Wars Phase I Clone Armor</li>
+    </mods>
+		<match Class="PatchOperationSequence">
+		<operations>
+				
+				
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[
+				defName="PhaseI_ColdAssault_Armor" or
+				defName="Commando_Katarn_Armor" or
+				defName="PhaseI_Standard_Armor" or
+				defName="PhaseI_Sergeant_Armor" or
+				defName="PhaseI_Lieutenant_Armor" or
+				defName="PhaseI_Captain_Armor" or
+				defName="PhaseI_Commander_Armor" or
+				defName="PhaseI_ARC1_Armor" or
+				defName="PhaseI_ARC2_Armor" or
+				defName="PhaseI_ARC3_Armor" or
+				defName="PhaseI_ARC4_Armor"
+				]/statBases</xpath>
+				<value>
+					<Bulk>80</Bulk>
+					<WornBulk>12</WornBulk>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[
+				defName="PhaseI_ColdAssault_Armor" or
+				defName="Commando_Katarn_Armor" or
+				defName="PhaseI_Standard_Armor" or
+				defName="PhaseI_Sergeant_Armor" or
+				defName="PhaseI_Lieutenant_Armor" or
+				defName="PhaseI_Captain_Armor" or
+				defName="PhaseI_Commander_Armor" or
+				defName="PhaseI_ARC1_Armor" or
+				defName="PhaseI_ARC2_Armor" or
+				defName="PhaseI_ARC3_Armor" or
+				defName="PhaseI_ARC4_Armor"
+				]/statBases/MaxHitPoints</xpath>
+				<value>
+					<MaxHitPoints>400</MaxHitPoints>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[
+				defName="PhaseI_ColdAssault_Armor" or
+				defName="Commando_Katarn_Armor" or
+				defName="PhaseI_Standard_Armor" or
+				defName="PhaseI_Sergeant_Armor" or
+				defName="PhaseI_Lieutenant_Armor" or
+				defName="PhaseI_Captain_Armor" or
+				defName="PhaseI_Commander_Armor" or
+				defName="PhaseI_ARC1_Armor" or
+				defName="PhaseI_ARC2_Armor" or
+				defName="PhaseI_ARC3_Armor" or
+				defName="PhaseI_ARC4_Armor"
+				]/statBases/Mass</xpath>
+				<value>
+					<Mass>30</Mass>
+				</value>
+			</li>
+
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[
+				defName="PhaseI_ColdAssault_Armor" or
+				defName="Commando_Katarn_Armor" or
+				defName="PhaseI_Standard_Armor" or
+				defName="PhaseI_Sergeant_Armor" or
+				defName="PhaseI_Lieutenant_Armor" or
+				defName="PhaseI_Captain_Armor" or
+				defName="PhaseI_Commander_Armor" or
+				defName="PhaseI_ARC1_Armor" or
+				defName="PhaseI_ARC2_Armor" or
+				defName="PhaseI_ARC3_Armor" or
+				defName="PhaseI_ARC4_Armor"
+				]/costList</xpath>
+				<value>
+					<costList>
+						<Steel>120</Steel>
+						<Plasteel>50</Plasteel>
+						<ComponentIndustrial>8</ComponentIndustrial>
+					</costList>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[
+				defName="PhaseI_ColdAssault_Armor" or
+				defName="Commando_Katarn_Armor" or
+				defName="PhaseI_Standard_Armor" or
+				defName="PhaseI_Sergeant_Armor" or
+				defName="PhaseI_Lieutenant_Armor" or
+				defName="PhaseI_Captain_Armor" or
+				defName="PhaseI_Commander_Armor" or
+				defName="PhaseI_ARC1_Armor" or
+				defName="PhaseI_ARC2_Armor" or
+				defName="PhaseI_ARC3_Armor" or
+				defName="PhaseI_ARC4_Armor"
+				]/statBases/ArmorRating_Sharp</xpath>
+				<value>
+					<ArmorRating_Sharp>14</ArmorRating_Sharp>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[
+				defName="PhaseI_ColdAssault_Armor" or
+				defName="Commando_Katarn_Armor" or
+				defName="PhaseI_Standard_Armor" or
+				defName="PhaseI_Sergeant_Armor" or
+				defName="PhaseI_Lieutenant_Armor" or
+				defName="PhaseI_Captain_Armor" or
+				defName="PhaseI_Commander_Armor" or
+				defName="PhaseI_ARC1_Armor" or
+				defName="PhaseI_ARC2_Armor" or
+				defName="PhaseI_ARC3_Armor" or
+				defName="PhaseI_ARC4_Armor"
+				]/statBases/ArmorRating_Blunt</xpath>
+				<value>
+					<ArmorRating_Blunt>15</ArmorRating_Blunt>
+				</value>
+			</li>
+			<!--
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[
+				defName="PhaseI_ColdAssault_Armor" or
+				defName="Commando_Katarn_Armor" or
+				defName="PhaseI_Standard_Armor" or
+				defName="PhaseI_Sergeant_Armor" or
+				defName="PhaseI_Lieutenant_Armor" or
+				defName="PhaseI_Captain_Armor" or
+				defName="PhaseI_Commander_Armor" or
+				defName="PhaseI_ARC1_Armor" or
+				defName="PhaseI_ARC2_Armor" or
+				defName="PhaseI_ARC3_Armor" or
+				defName="PhaseI_ARC4_Armor"
+				]/statBases/ArmorRating_Sharp</xpath>
+				<value>
+					<ArmorRating_Heat>0.54</ArmorRating_Heat>
+				</value>
+			</li>
+			-->
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[
+				defName="PhaseI_ColdAssault_Armor" or
+				defName="Commando_Katarn_Armor" or
+				defName="PhaseI_Standard_Armor" or
+				defName="PhaseI_Sergeant_Armor" or
+				defName="PhaseI_Lieutenant_Armor" or
+				defName="PhaseI_Captain_Armor" or
+				defName="PhaseI_Commander_Armor" or
+				defName="PhaseI_ARC1_Armor" or
+				defName="PhaseI_ARC2_Armor" or
+				defName="PhaseI_ARC3_Armor" or
+				defName="PhaseI_ARC4_Armor"
+				]/costList</xpath>
+				<value>
+					<DevilstrandCloth>40</DevilstrandCloth>
+				</value>
+			</li>
+
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/ThingDef[
+				defName="PhaseI_ColdAssault_Armor" or
+				defName="Commando_Katarn_Armor" or
+				defName="PhaseI_Standard_Armor" or
+				defName="PhaseI_Sergeant_Armor" or
+				defName="PhaseI_Lieutenant_Armor" or
+				defName="PhaseI_Captain_Armor" or
+				defName="PhaseI_Commander_Armor" or
+				defName="PhaseI_ARC1_Armor" or
+				defName="PhaseI_ARC2_Armor" or
+				defName="PhaseI_ARC3_Armor" or
+				defName="PhaseI_ARC4_Armor"
+				]/equippedStatOffsets</xpath>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[
+				defName="PhaseI_ColdAssault_Armor" or
+				defName="Commando_Katarn_Armor" or
+				defName="PhaseI_Standard_Armor" or
+				defName="PhaseI_Sergeant_Armor" or
+				defName="PhaseI_Lieutenant_Armor" or
+				defName="PhaseI_Captain_Armor" or
+				defName="PhaseI_Commander_Armor" or
+				defName="PhaseI_ARC1_Armor" or
+				defName="PhaseI_ARC2_Armor" or
+				defName="PhaseI_ARC3_Armor" or
+				defName="PhaseI_ARC4_Armor"
+				]</xpath>
+				<value>
+				<equippedStatOffsets>
+					<CarryWeight>15</CarryWeight>
+					<CarryBulk>25</CarryBulk>
+					<ToxicSensitivity>-0.40</ToxicSensitivity>
+					<MoveSpeed>0.1</MoveSpeed>
+				</equippedStatOffsets>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[
+				defName="PhaseI_ColdAssault_Armor" or
+				defName="Commando_Katarn_Armor" or
+				defName="PhaseI_Standard_Armor" or
+				defName="PhaseI_Sergeant_Armor" or
+				defName="PhaseI_Lieutenant_Armor" or
+				defName="PhaseI_Captain_Armor" or
+				defName="PhaseI_Commander_Armor" or
+				defName="PhaseI_ARC1_Armor" or
+				defName="PhaseI_ARC2_Armor" or
+				defName="PhaseI_ARC3_Armor" or
+				defName="PhaseI_ARC4_Armor"
+				]/apparel/bodyPartGroups</xpath>
+				<value>
+					<li>Hands</li>
+					<li>Feet</li>
+				</value>
+			</li>
+
+		  <li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[
+			defName="PhaseI_ARF_Helmet" or
+			defName="PhaseI_ColdAssaultPhaseI_Helmet" or
+			defName="Commando_Katarn_Helmet" or
+			defName="PhaseI_Standard_Helmet" or
+			defName="PhaseI_Sergeant_Helmet" or
+			defName="PhaseI_Lieutenant_Helmet" or
+			defName="PhaseI_Captain_Helmet" or
+			defName="PhaseI_Commander_Helmet" or
+			defName="PhaseI_ARC1_Helmet" or
+			defName="PhaseI_ARC2_Helmet" or
+			defName="PhaseI_ARC3_Helmet" or
+			defName="PhaseI_ARC4_Helmet" or
+			defName="PhaseI_Pilot_Helmet" or
+			defName="PhaseI_Special_Ops_Helmet"	
+			]/statBases</xpath>
+			<value>
+			  <Bulk>4</Bulk>
+			  <WornBulk>1</WornBulk>
+			</value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[
+			defName="PhaseI_ARF_Helmet" or
+			defName="PhaseI_ColdAssaultPhaseI_Helmet" or
+			defName="Commando_Katarn_Helmet" or
+			defName="PhaseI_Standard_Helmet" or
+			defName="PhaseI_Sergeant_Helmet" or
+			defName="PhaseI_Lieutenant_Helmet" or
+			defName="PhaseI_Captain_Helmet" or
+			defName="PhaseI_Commander_Helmet" or
+			defName="PhaseI_ARC1_Helmet" or
+			defName="PhaseI_ARC2_Helmet" or
+			defName="PhaseI_ARC3_Helmet" or
+			defName="PhaseI_ARC4_Helmet" or
+			defName="PhaseI_Pilot_Helmet" or
+			defName="PhaseI_Special_Ops_Helmet"	
+			]/statBases/MaxHitPoints</xpath>
+			<value>
+			  <MaxHitPoints>190</MaxHitPoints>
+			</value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[
+			defName="PhaseI_ARF_Helmet" or
+			defName="PhaseI_ColdAssaultPhaseI_Helmet" or
+			defName="Commando_Katarn_Helmet" or
+			defName="PhaseI_Standard_Helmet" or
+			defName="PhaseI_Sergeant_Helmet" or
+			defName="PhaseI_Lieutenant_Helmet" or
+			defName="PhaseI_Captain_Helmet" or
+			defName="PhaseI_Commander_Helmet" or
+			defName="PhaseI_ARC1_Helmet" or
+			defName="PhaseI_ARC2_Helmet" or
+			defName="PhaseI_ARC3_Helmet" or
+			defName="PhaseI_ARC4_Helmet" or
+			defName="PhaseI_Pilot_Helmet" or
+			defName="PhaseI_Special_Ops_Helmet"	
+			]/statBases/ArmorRating_Sharp</xpath>
+			<value>
+			  <ArmorRating_Sharp>10</ArmorRating_Sharp>
+			</value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[
+			defName="PhaseI_ARF_Helmet" or
+			defName="PhaseI_ColdAssaultPhaseI_Helmet" or
+			defName="Commando_Katarn_Helmet" or
+			defName="PhaseI_Standard_Helmet" or
+			defName="PhaseI_Sergeant_Helmet" or
+			defName="PhaseI_Lieutenant_Helmet" or
+			defName="PhaseI_Captain_Helmet" or
+			defName="PhaseI_Commander_Helmet" or
+			defName="PhaseI_ARC1_Helmet" or
+			defName="PhaseI_ARC2_Helmet" or
+			defName="PhaseI_ARC3_Helmet" or
+			defName="PhaseI_ARC4_Helmet" or
+			defName="PhaseI_Pilot_Helmet" or
+			defName="PhaseI_Special_Ops_Helmet"	
+			]/statBases/ArmorRating_Blunt</xpath>
+			<value>
+			  <ArmorRating_Blunt>15</ArmorRating_Blunt>
+			</value>
+		  </li>
+
+		  <li Class="PatchOperationRemove">
+			<xpath>Defs/ThingDef[
+			defName="PhaseI_ARF_Helmet" or
+			defName="PhaseI_ColdAssaultPhaseI_Helmet" or
+			defName="Commando_Katarn_Helmet" or
+			defName="PhaseI_Standard_Helmet" or
+			defName="PhaseI_Sergeant_Helmet" or
+			defName="PhaseI_Lieutenant_Helmet" or
+			defName="PhaseI_Captain_Helmet" or
+			defName="PhaseI_Commander_Helmet" or
+			defName="PhaseI_ARC1_Helmet" or
+			defName="PhaseI_ARC2_Helmet" or
+			defName="PhaseI_ARC3_Helmet" or
+			defName="PhaseI_ARC4_Helmet" or
+			defName="PhaseI_Pilot_Helmet" or
+			defName="PhaseI_Special_Ops_Helmet"	
+			]/equippedStatOffsets</xpath>
+		  </li>
+
+		  <li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[
+			defName="PhaseI_ARF_Helmet" or
+			defName="PhaseI_ColdAssaultPhaseI_Helmet" or
+			defName="Commando_Katarn_Helmet" or
+			defName="PhaseI_Standard_Helmet" or
+			defName="PhaseI_Sergeant_Helmet" or
+			defName="PhaseI_Lieutenant_Helmet" or
+			defName="PhaseI_Captain_Helmet" or
+			defName="PhaseI_Commander_Helmet" or
+			defName="PhaseI_ARC1_Helmet" or
+			defName="PhaseI_ARC2_Helmet" or
+			defName="PhaseI_ARC3_Helmet" or
+			defName="PhaseI_ARC4_Helmet" or
+			defName="PhaseI_Pilot_Helmet" or
+			defName="PhaseI_Special_Ops_Helmet"	
+			]</xpath>
+			<value>
+			  <equippedStatOffsets>
+				<PsychicSensitivity>-0.2</PsychicSensitivity>
+				<AimingAccuracy>0.1</AimingAccuracy>
+				<ToxicSensitivity>-0.50</ToxicSensitivity>
+				<SmokeSensitivity>-1</SmokeSensitivity>
+			  </equippedStatOffsets>
+			</value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[
+			defName="PhaseI_ARF_Helmet" or
+			defName="PhaseI_ColdAssaultPhaseI_Helmet" or
+			defName="Commando_Katarn_Helmet" or
+			defName="PhaseI_Standard_Helmet" or
+			defName="PhaseI_Sergeant_Helmet" or
+			defName="PhaseI_Lieutenant_Helmet" or
+			defName="PhaseI_Captain_Helmet" or
+			defName="PhaseI_Commander_Helmet" or
+			defName="PhaseI_ARC1_Helmet" or
+			defName="PhaseI_ARC2_Helmet" or
+			defName="PhaseI_ARC3_Helmet" or
+			defName="PhaseI_ARC4_Helmet" or
+			defName="PhaseI_Pilot_Helmet" or
+			defName="PhaseI_Special_Ops_Helmet"	
+			]/costList</xpath>
+			<value>
+			<costList>
+				<Steel>40</Steel>
+				<Plasteel>20</Plasteel>
+				<ComponentIndustrial>4</ComponentIndustrial>
+				<DevilstrandCloth>15</DevilstrandCloth>
+			</costList>
+			</value>
+		  </li>
+
+		  <li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[
+			defName="PhaseI_ARF_Helmet" or
+			defName="PhaseI_ColdAssaultPhaseI_Helmet" or
+			defName="Commando_Katarn_Helmet" or
+			defName="PhaseI_Standard_Helmet" or
+			defName="PhaseI_Sergeant_Helmet" or
+			defName="PhaseI_Lieutenant_Helmet" or
+			defName="PhaseI_Captain_Helmet" or
+			defName="PhaseI_Commander_Helmet" or
+			defName="PhaseI_ARC1_Helmet" or
+			defName="PhaseI_ARC2_Helmet" or
+			defName="PhaseI_ARC3_Helmet" or
+			defName="PhaseI_ARC4_Helmet" or
+			defName="PhaseI_Pilot_Helmet" or
+			defName="PhaseI_Special_Ops_Helmet"	
+			]/apparel/layers</xpath>
+			<value>
+			  <li>OnHead</li>
+			  <li>StrappedHead</li>
+			  <li>MiddleHead</li>
+			</value>
+		  </li>
+			
+		</operations>
+		</match>
+	</Operation>
+	
+</Patch>

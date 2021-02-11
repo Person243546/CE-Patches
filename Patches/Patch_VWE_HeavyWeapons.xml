@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+		<li>Vanilla Weapons Expanded - Heavy Weapons</li>
+    </mods>
+		<match Class="PatchOperationSequence">
+		<operations>
+			
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/VFECore.ExpandableProjectileDef[defName="VWE_Bullet_HeavyFlamer"]/projectile</xpath>
+				<value>
+					<projectile>
+						<damageDef>PrometheumFlame</damageDef>
+						<speed>45</speed>
+						<damageAmountBase>8</damageAmountBase>
+					</projectile>
+				</value>
+			</li>
+			
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VWE_Gun_HeavyFlamer"]/verbs</xpath>
+				<value>
+					<verbs>
+						<li>
+							<verbClass>HeavyWeapons.Verb_Shoot</verbClass>
+							<hasStandardCommand>true</hasStandardCommand>
+							<defaultProjectile>VWE_Bullet_HeavyFlamer</defaultProjectile>
+							<ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+							<burstShotCount>1</burstShotCount>
+							<soundCast>InfernoCannon_Fire</soundCast>
+							<soundCastTail>GunTail_Light</soundCastTail>
+							<muzzleFlashScale>14</muzzleFlashScale>
+							<warmupTime>1.8</warmupTime>
+							<range>26</range>
+							<minRange>3</minRange>
+							<targetParams>
+							  <canTargetLocations>true</canTargetLocations>
+							</targetParams>
+						</li>
+					</verbs>
+				</value>
+			</li>
+			
+			
+			
+			
+			
+		</operations>
+		</match>
+	</Operation>
+	
+</Patch>

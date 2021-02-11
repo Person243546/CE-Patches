@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+		<li>Alpha Ships</li>
+    </mods>
+		<match Class="PatchOperationSequence">
+		<operations>
+			
+			
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[@Name="AS_ShipPartBase"]</xpath>
+				<value>
+				
+				<designationCategory>Ship</designationCategory>
+				<researchPrerequisites>
+				  <li>ShipBasics</li>
+				</researchPrerequisites>
+				
+				</value>
+			</li>
+			
+			
+			
+			
+			
+		</operations>
+		</match>
+	</Operation>
+	
+</Patch>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+		<li>Powerful Psycast AI</li>
+    </mods>
+		<match Class="PatchOperationSequence">
+		<operations>
+			
+			
+			
+			<li Class="PatchOperationAddModExtension">
+				<xpath>Defs/PawnKindDef[@Name="ImperialPsykerBase"]</xpath>
+				<value>
+					<li Inherit="False" Class="CombatExtended.LoadoutPropertiesExtension">
+					<primaryMagazineCount>
+						<min>2</min>
+						<max>7</max>
+					</primaryMagazineCount>
+					<forcedSidearm>
+					  <sidearmMoney>
+						<min>500</min>
+						<max>1200</max>
+					  </sidearmMoney>
+					  <weaponTags>
+						<li>CE_Sidearm_Melee</li>
+					  </weaponTags>
+					</forcedSidearm>
+					</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationConditional">
+				<xpath>Defs/PawnKindDef[
+				@Name="ImperialPsykerBase"
+				]/apparelRequired</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[@Name="ImperialPsykerBase"]</xpath>
+					<value>
+						<apparelRequired/>
+					</value>
+				</nomatch>
+				<match Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[@Name="ImperialPsykerBase"]</xpath>
+					<value>
+					</value>
+				</match>
+			</li>
+						
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/PawnKindDef[
+				@Name="ImperialPsykerBase"
+				]/apparelRequired</xpath>
+				<value>
+					<li>Apparel_Backpack</li>
+				</value>
+			</li>			
+			
+			
+		</operations>
+		</match>
+	</Operation>
+	
+</Patch>
